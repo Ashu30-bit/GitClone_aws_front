@@ -21,11 +21,11 @@ const ProjectRoutes = () => {
         setCurrentUser(userIdFromStorage);
     }
 
-    if (!userIdFromStorage && !["/auth", "/signup"].includes(window.location.pathname)) {
+    if (!userIdFromStorage && !["/login", "/signup"].includes(window.location.pathname)) {
         nevigate("/login");
     }
 
-    if (userIdFromStorage && window.location.pathname === "/auth") {
+    if (userIdFromStorage && window.location.pathname === "/login") {
         nevigate("/");
     }
 
